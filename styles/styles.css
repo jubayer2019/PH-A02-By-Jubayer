@@ -35,7 +35,7 @@ header{
 }
 .nav-gdn{
     background: linear-gradient(to top, rgba(247, 233, 63, 1),rgba(251, 9, 180, 1),rgba(145, 0, 248, 1));
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .nav-container{
@@ -52,13 +52,13 @@ header{
     display: flex;
     list-style-type: none;
     gap: 32px;
-
 }
 .nav-container nav ul li a{
     text-decoration: none;
     color: white;
-
 }
 .nav-container nav ul li a:hover{
-    color: #007bff;
+    background: linear-gradient(to top, rgba(247, 233, 63, 1),rgba(251, 9, 180, 1),rgba(145, 0, 248, 1));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
