@@ -23,6 +23,7 @@
     border: none;
     border-radius: 50px;
     color: white;
+    cursor: pointer;
 }
 
 .ucm-btn{
@@ -31,12 +32,13 @@
     color: #00FF88;
     border-radius: 50px;
     background: none;
+    cursor: pointer;
 }
 
 /* Header Navigation Start */
 header{
     max-width: 1600px;
-    background-color: #412567;
+    background-color: #1A0B2E;
     height: 92px;
     display: flex;
     justify-content: center;
@@ -45,7 +47,7 @@ header{
 .nav-gdn{
     background: linear-gradient(to top, rgba(247, 233, 63, 1),rgba(251, 9, 180, 1),rgba(145, 0, 248, 1));
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;;
 }
 .nav-container{
     width: 80%;
@@ -57,20 +59,58 @@ header{
     justify-content: space-between;
     align-items: center;
 }
-.nav-container nav ul{
+.nav-container nav h2{
+    font-size: 2rem;
+}
+.navigation-ham{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20rem;
+}
+.navigation-ham ul{
     display: flex;
     list-style-type: none;
     gap: 32px;
 }
-.nav-container nav ul li a{
+.navigation-ham ul li a{
     text-decoration: none;
     color: white;
 }
-.nav-container nav ul li a:hover{
+.navigation-ham ul li a:hover{
     background: linear-gradient(to top, rgba(247, 233, 63, 1),rgba(251, 9, 180, 1),rgba(145, 0, 248, 1));
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+/* Navigation Responsive */
+@media screen and (max-width: 576px){
+    .navigation-ham{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+    .navigation-ham ul{
+        flex-direction: column;
+        position: absolute;
+        top: 92px;
+        left: 0;
+        width: 100%;
+        background-color: #1A0B2E;
+        padding: 16px 0;
+    }
+    #hamburger:checked ~ .nav-container{
+        display: flex;
+        /* display: block !important; */
+    }
+}
+
+
 /* Navigation End */
 
 /* Hero Section Start */
@@ -91,28 +131,30 @@ header{
 }
 
 .mic{
+    height: 350px;
+    width: 350px;
     position: relative;
     display: inline-block;
 }
 .img1{
-    display: block;
-    position: relative;
+    height: 100%;
+    width: 100%;
     }
 .img2{
     position: absolute;
-    top: 25%;
-    left: 33.5%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .badge {
-    position: relative;
-    z-index: 2;
-    top: 10%;
-    right: -30%;
+    position: absolute;
+    top: 5%;
+    left: 75%;
     background: #00FF88;
     color: black;
     padding: 8px 16px;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 1.125rem;
+    font-weight: 600;
     border-radius: 20px;
     box-shadow: 0px 3px 27px 0px rgba(0, 255, 136, 0.5);
 }
@@ -121,12 +163,12 @@ header{
     margin-top: 40px;
 }
 .hero-content h1{
-    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: 700;
     margin-bottom: 16px;
 }
 .hero-content p{
-    font-size: 20px;
+    font-size: 1.25rem;
     margin-bottom: 24px;
 }
 
