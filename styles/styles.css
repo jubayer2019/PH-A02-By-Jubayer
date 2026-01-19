@@ -400,3 +400,47 @@ header{
 }
 
 /* Featured Episodes Section End */
+
+/* Footer Section Start */
+
+.footer-container{
+    max-width: 1920px;
+    height: 412px;
+    background-image: url(../assets/footer-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+}
+.footer-container h1{
+    font-size: 5rem;
+    font-weight: 700;
+}
+.footer-container .ft-icon{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2.625rem;
+}
+.footer-container .ft-icon .ft-social{
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    gap: 1rem;
+}
+
+.footer-container .ft-icon .ft-social img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.footer-container p{
+    opacity: 0.4;
+}
+
+/* Footer Section End */
