@@ -289,3 +289,113 @@ header{
 .grid-child-5{
     grid-row: span 1;
 }
+/* Why Choose TechWave Section End */
+
+/* Featured Episodes Section Start */
+
+.featured-container{
+    max-width: 1920px;
+    height: 1276px;
+    background-color: #1A0B2E;
+    color: white;
+    padding: 7.5rem 12.5rem;
+}
+
+.ft-content{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 7.5rem;
+}
+
+.f-ep{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.f-ep .card{
+    background-color: #250D44;
+    width: 23.75rem;
+    height: 27.5rem;
+    border-radius: 1.5rem;
+}
+
+.f-ep .card iframe{
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+.f-ep .card .card-content{
+    padding: 1rem 1.5rem;
+    text-align: left;
+}
+.f-ep .card .card-content h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.f-ep .card .card-content h2, p{
+    margin-bottom: 1rem;
+}
+.video-time img{
+    width: 1.25rem;
+    height: 1.25rem;
+}
+.video-time{
+    display: flex;
+    justify-content:left;
+    color: #00FF88;
+    text-align: left;
+    gap: 0.375rem;
+}
+.f-mt{
+    width: 80%;
+    margin: 0 auto;
+}
+.f-mt h1{
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.single-card{
+    padding: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    border-radius: 2.5rem;
+    background: rgba(53, 17, 101, 0.4);
+}
+
+.single-card .sc-img{
+    width: 12.5rem;
+    height: 12.5rem;
+}
+
+.sc-content h2{
+    font-size: 2rem;
+    font-style: 700;
+    margin-bottom: 1rem;
+}
+.sc-content p{
+    margin-bottom: 1rem;
+}
+
+.sc-content .social-icons {
+    display: flex;
+    list-style: none;
+    /* justify-content: left; */
+    gap: 0.5rem;
+}
+
+.sc-content .social-icons li{
+    height: 2.5rem;
+    width: 2.5rem;
+    box-sizing: border-box;
+    border: 1px solid rgba(83, 60, 114, 1);
+    border-radius: 2rem;
+    align-items: center;
+    padding: 0.625rem;
+}
+
+/* Featured Episodes Section End */
