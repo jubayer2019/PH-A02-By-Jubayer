@@ -177,3 +177,56 @@ header{
     justify-content: center;
     gap: 8px;
 }
+
+/* Hero Section End */
+
+/* About Section Start */
+
+.about-container{
+    max-width: 1600px;
+    background-color: #1A0B2E;
+    height: 646px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+.about-content{
+    width: 60%;
+    margin: 0 auto;
+}
+.about-content h1{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.about-content p{
+    font-size: 1rem;
+}
+
+.hr-line{
+    width: 80%;
+    border: none;
+    height: 1px;
+}
+
+.about-cards{
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.ab-cards h1{
+    font-size: 3rem;
+    color: #00FF88;
+    text-align: center;
+    margin-bottom: 16px;
+}
+.ab-cards p{
+    font-size: 1rem;
+    text-align: center;
+}
