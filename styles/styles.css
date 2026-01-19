@@ -15,6 +15,10 @@
 }
 /* Fonts End */
 
+body{
+    max-width: 100%;
+}
+
 /* Common Button Effect */
 
 .cm-btn{
@@ -37,7 +41,7 @@
 
 /* Header Navigation Start */
 header{
-    max-width: 1920px;
+    /* max-width: 1920px; */
     background-color: #1A0B2E;
     height: 92px;
     display: flex;
@@ -84,20 +88,14 @@ header{
 
 /* Navigation Responsive */
 @media screen and (max-width: 576px){
-    .navigation-ham{
+    .nav-container .nav-links{
         display: none;
     }
     .hamburger{
         display: block;
     }
-    .navigation-ham ul{
-        flex-direction: column;
-        position: absolute;
-        top: 92px;
-        left: 0;
-        width: 100%;
-        background-color: #1A0B2E;
-        padding: 16px 0;
+    .nav-container div button{
+        display: none;
     }
     #hamburger:checked ~ .nav-container{
         display: flex;
@@ -111,7 +109,7 @@ header{
 /* Hero Section Start */
 .hero-container{
     width: 100%;
-    max-width: 1920px;
+    /* max-width: 1920px; */
     height: 760px;
     background-image: url(../assets/hero-bg.png);
     background-repeat: no-repeat;
@@ -162,9 +160,10 @@ header{
     font-weight: 700;
     margin-bottom: 16px;
 }
-.hero-content p{
+.hero-content .hcp{
     font-size: 1.25rem;
     margin-bottom: 24px;
+    text-align: center;
 }
 
 .hero-btn{
@@ -172,15 +171,77 @@ header{
     justify-content: center;
     gap: 8px;
 }
+/* Hero Section Responsive */
+@media screen and (max-width: 576px){
+    .hero-container{
+        height: 466px;
+        width: 100%;
+        background-image: url(../assets/hero-bg.png);
+        background-size: 180% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+    .mic{
+        height: 12.55rem;
+        width: 12.5rem;
+        position: relative;
+        display: inline-block;
+    }
+    .img1{
+        height: 100%;
+        width: 100%;
+        }
+    .img2{
+        height: auto;
+        width: 30%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .badge {
+        position: absolute;
+        top: 5%;
+        left: 75%;
+        background: #00FF88;
+        color: black;
+        padding: 4px 8px;
+        font-size: 1.125rem;
+        font-weight: 600;
+        border-radius: 20px;
+        box-shadow: 0px 3px 27px 0px rgba(0, 255, 136, 0.5);
+    }
+
+    .hero-content{
+        margin-top: 2.5rem;
+        padding: 0 1.25rem;
+    }
+    .hero-content h1{
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+    .hero-content p{
+        font-size: 1rem;
+    }
+
+    .hero-btn{
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+    }
+}
 
 /* Hero Section End */
+
 
 /* About Section Start */
 
 .about-container{
-    max-width: 1920px;
+    /* max-width: 1920px; */
     background-color: #1A0B2E;
-    height: 646px;
+    /* height: 646px; */
+    padding: 50px 200px 120px 200px;
     color: white;
     display: flex;
     flex-direction: column;
@@ -198,8 +259,9 @@ header{
     font-weight: 700;
     margin-bottom: 16px;
 }
-.about-content p{
+.about-content .abt-p{
     font-size: 1rem;
+    text-align: center;
 }
 
 .hr-line{
@@ -225,13 +287,53 @@ header{
     font-size: 1rem;
     text-align: center;
 }
+
+/* About Section Responsive */
+@media screen and (max-width: 576px){
+    .about-container{
+        background-color: #1A0B2E;
+        /* height: 575px; */
+        width: 100%;
+        padding: 40px 20px;
+    }
+    .about-container .about-content{
+        width: 90%;
+    }
+    .about-container .about-content h1{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    .hr-line{
+        width: 80%;
+        border: none;
+    }
+
+    .about-cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .ab-cards h1{
+        font-size: 2.5rem;
+        color: #00FF88;
+        text-align: center;
+    }
+    .ab-cards p{
+        font-size: 1rem;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
+
 /* About Section End */
 
 /* Why Choose TechWave Section Start */
 
 .wct-container{
-    max-width: 1920px;
-    height: 1121px;
+    /* max-width: 1920px; */
+    /* height: 1121px; */
     background-color: #230E3D;
     color: white;
     padding: 7.5rem 12.5rem;
@@ -239,7 +341,7 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
 }
 .wct-container h1{
     margin-bottom: 2.25rem;
@@ -289,13 +391,44 @@ header{
 .grid-child-5{
     grid-row: span 1;
 }
+
+/* Why Choose TechWave Section Responsive */
+@media screen and (max-width: 576px){
+    .wct-container{
+        padding: 40px 20px;
+    }
+    .wct-content .grid-parent{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(5, auto);
+        justify-items: left;
+    }
+    .g-child h2{
+        font-size: 1.375rem;
+        font-weight: 600;
+        text-align: left;
+    }
+    .g-child-p{
+        font-size: 1rem;
+        line-height: 1.5rem;
+        text-align: left;
+    }
+    .grid-child-1{
+        grid-row: span 1;
+        
+    }
+    .grid-child-2, .grid-child-3, .grid-child-4{
+        grid-column: span 1;
+    }
+}
+
 /* Why Choose TechWave Section End */
 
 /* Featured Episodes Section Start */
 
 .featured-container{
-    max-width: 1920px;
-    height: 1276px;
+    /* max-width: 1920px; */
+    /* height: 1276px; */
     background-color: #1A0B2E;
     color: white;
     padding: 7.5rem 12.5rem;
@@ -309,6 +442,8 @@ header{
 }
 
 .f-ep{
+    width: 80%;
+    margin: 0 auto;
     display: flex;
     gap: 2rem;
     justify-content: center;
@@ -336,6 +471,7 @@ header{
 }
 .f-ep .card .card-content h2, p{
     margin-bottom: 1rem;
+    text-align: left;
 }
 .video-time img{
     width: 1.25rem;
@@ -399,13 +535,51 @@ header{
     cursor: pointer;
 }
 
+/* Featured Episodes Section Responsive */
+@media screen and (max-width: 576px){
+    .featured-container{
+        width: 100%;
+        padding: 40px 20px;
+        margin: 0 auto;
+    }
+    .f-ep{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, auto);
+    }
+    .f-mt{
+        width: 100%;
+    }
+    .single-card{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 24px;
+    }
+    .sc-content h2{
+        font-size: 1.5rem;
+    }
+    .sc-content p{
+        text-align: center;
+    }
+    .social-icons{
+        justify-content: center;
+    }
+}
+
+
 /* Featured Episodes Section End */
 
 /* Footer Section Start */
 
 .footer-container{
-    max-width: 1920px;
-    height: 412px;
+    /* max-width: 1920px; */
+    /* height: 412px; */
+    padding: 120px;
     background-image: url(../assets/footer-bg.png);
     background-size: cover;
     background-position: center;
@@ -430,7 +604,7 @@ header{
 }
 .footer-container .ft-icon .ft-social{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     text-align: left;
     gap: 1rem;
 }
@@ -441,6 +615,34 @@ header{
 }
 .footer-container p{
     opacity: 0.4;
+}
+
+
+/* Footer Section Responsive */
+@media screen and (max-width:576px){
+    .footer-container{
+        padding: 40px 20px;
+        width: 100%;
+        height: 100%;
+        background-image: url(../assets/footer-bg.png);
+        background-size: 180% 100%;
+        background-repeat: no-repeat;
+    }
+    .footer-container h1{
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+    .footer-container .ft-icon{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+        gap: 1rem;
+        justify-content: space-around;
+    }
+    .footer-container .ft-icon .row2{
+        padding-left: 2rem;
+    }
 }
 
 /* Footer Section End */
